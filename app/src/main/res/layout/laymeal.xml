@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================= -->
+<!-- Application: Bike Bistro Food Order Application -->
+<!-- Activity:    ActMeal -->
+<!-- ============================================================= -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ActMeal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/holo_orange_light"
+        >
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Toolbar row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbrMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            />
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Entrees row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_orange_light"
+                android:textColor="@android:color/black"
+                android:text="Entrees:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:id="@+id/spEntree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_orange_dark"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etEntree"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Drinks row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Drinks:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:id="@+id/spDrink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_orange_dark"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etDrink"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Desserts row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Desserts:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:id="@+id/spDessert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_orange_dark"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etDessert"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Subtotal row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Subtotal ($):"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etSubtotal"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Recall row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Recall"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:onClick="recallOrder"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Reset row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:onClick="resetOrder"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Delivery row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Delivery"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:onClick="deliveryOrder"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

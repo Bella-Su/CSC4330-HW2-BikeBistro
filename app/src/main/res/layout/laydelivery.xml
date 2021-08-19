@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================= -->
+<!-- Application: Bike Bistro Food Order Application -->
+<!-- Activity:    ActDelivery -->
+<!-- ============================================================= -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ActDelivery">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/holo_orange_light"
+        >
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Toolbar row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbrDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            />
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Customer name row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Customer Name:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/edCustomerName"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Delivery address row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Delivery Address:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etDeliveryAddress"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Phone number row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Phone Number:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etPhoneNUmber"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="4dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Subtotal row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Subtotal ($):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etSubtotalFromActMeal"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Phone number row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Tax ($):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etTax"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Distance row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Distance (miles):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <SeekBar
+                android:id="@+id/sbDistance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="2"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:max="22"
+                android:padding="4dp"
+                android:progress="1" />
+
+            <EditText
+                android:id="@+id/etDistance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Delivery cost row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Delivery Cost ($):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etDeliveryCost"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Tip row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Tip ($):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etTip"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Total cost row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="Total Cost ($):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etTotalCost"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Estimated time arrival row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/black"
+                android:text="ETA(minutes):"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etETA"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                />
+
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Recall row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Recall"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:onClick="recallDelivery"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+        </LinearLayout>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Reset row -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:onClick="resetDelivery"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+        </LinearLayout>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Submit row -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_orange_light"
+            >
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:onClick="submitDelivery"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+            </Space>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
